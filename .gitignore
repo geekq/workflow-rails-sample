@@ -29,3 +29,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Do not check in lock file, since with this sample application we also want
+# to test, which library versions get installed
+Gemfile.lock
