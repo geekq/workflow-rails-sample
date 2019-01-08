@@ -8,6 +8,16 @@ This is a sample Rails application to
 2. and to test gem dependencies on gem release.
    S.also https://github.com/geekq/workflow-activerecord/issues/1
 
+## To try it out
+
+Start with an empty [rbenv](https://github.com/rbenv/rbenv) or rvm environment.
+
+    git clone git@github.com:geekq/workflow-rails-sample.git
+    cd workflow-rails-sample
+
+    gem install bundler
+    bundle install
+
 ## Application created with
 
 ```
