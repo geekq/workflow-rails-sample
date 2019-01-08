@@ -20,4 +20,7 @@ rails new workflow-rails-sample
 cd workflow-rails-sample
 vim .gitignore
 vim Gemfile
+rbenv local sample2
+gem install bundler
+bundle install
 ```
