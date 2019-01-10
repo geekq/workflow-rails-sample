@@ -42,6 +42,21 @@ class ArticlesController < ApplicationController
     redirect_to articles_url, notice: 'Article was successfully submitted for review.'
   end
 
+  def review
+    @article.review!
+    redirect_to articles_url, notice: 'Article is now being reviewed'
+  end
+
+  def accept
+    @article.accept!
+    redirect_to articles_url, notice: 'Article has been accepted'
+  end
+
+  def reject
+    @article.reject!
+    redirect_to articles_url, notice: 'Article has been rejected'
+  end
+
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'articles#index'
+  root to: redirect('articles')
   resources :articles do
     member do
       post 'submit'
