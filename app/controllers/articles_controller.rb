@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [:show, :edit, :update, :destroy, :submit, :review, :accept, :reject]
 
   # GET /articles
   # GET /articles.json
@@ -35,6 +35,11 @@ class ArticlesController < ApplicationController
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def submit
+    @article.submit!
+    redirect_to articles_url, notice: 'Article was successfully submitted for review.'
   end
 
   # PATCH/PUT /articles/1

@@ -17,6 +17,7 @@ Start with an empty [rbenv](https://github.com/rbenv/rbenv) or rvm environment.
 
     gem install bundler
     bundle install
+    bin/rails server
 
 ## Application created with
 
@@ -33,4 +34,6 @@ vim Gemfile
 rbenv local sample2
 gem install bundler
 bundle install
+bin/rails generate scaffold Article \
+  title:string summary:string content:text workflow_state:string author:string
 ```

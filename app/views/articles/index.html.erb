@@ -22,6 +22,7 @@
         <td><%= article.content %></td>
         <td><%= article.workflow_state %></td>
         <td><%= article.author %></td>
+        <td><%= button_to 'Submit', submit_article_path(article) %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
