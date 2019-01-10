@@ -17,6 +17,7 @@ Start with an empty [rbenv](https://github.com/rbenv/rbenv) or rvm environment.
 
     gem install bundler
     bundle install
+    bin/rails db:migrate db:seed
     bin/rails server
 
 ## Application created with
