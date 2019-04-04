@@ -4,3 +4,13 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+namespace :doc do
+  desc "Generate a workflow graph for the model"
+  task :workflow => :environment do
+    require 'workflow/draw'
+    Workflow::Draw::workflow_diagram(Article)
+  end
+end
+
+
