@@ -1,5 +1,3 @@
-require 'workflow'
-require 'workflow_activerecord'
 class Article < ApplicationRecord
   include WorkflowActiverecord
   workflow do
